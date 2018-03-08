@@ -34,7 +34,7 @@ truffle deploy --network [network]
 ```
 
 ## Rinkeby Factory Instance
-
+[Rinkeby Instance](https://warm-retreat-57848.herokuapp.com/)
 MyTokenFactory: 0xc922efc865436117055608b7a908e23e75da48f0
 
 ## Issues
