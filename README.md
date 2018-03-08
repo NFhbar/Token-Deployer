@@ -6,7 +6,7 @@ Build using [Truffle Drizzle](http://truffleframework.com/blog/drizzle-reactive-
 
 ## To run locally
 Install:
-[Metamask](https://metamask.io/#how-it-works)
+[Metamask](https://metamask.io/#how-it-works) & 
 [Ganache](http://truffleframework.com/ganache/)
 
 1. Run Ganache
