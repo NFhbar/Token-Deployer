@@ -27,7 +27,7 @@ npm run test
 ## Production build
 npm run build
 
-## deploy
+## Deploy
 To deploy:
 ```
 truffle deploy --network [network]
@@ -35,19 +35,19 @@ truffle deploy --network [network]
 
 ## Issues
 
-# Wrong Contract Address
+### Wrong Contract Address
 When migrating
 ```
 Error: Attempting to run transaction which calls a contract function, but recipient address 0x8cdaf0cd259887258bc13a92c0a6da92698644c0 is not a contract address
 ```
 Solution: delete contents of /build/contracts and recompile.
 
-# Jest test failing 872
+### Jest test failing 872
 https://github.com/reactstrap/reactstrap/issues/872
 
 Quick fix: revert to "reactstrap": "5.0.0-beta". It has older react-popper version.
 
-# Metamask does not support WS - Web1.0 Support
+### Metamask does not support WS - Web1.0 Support
 ```
 Error: The current provider doesn't support subscriptions: MetamaskInpageProvider
 ```
