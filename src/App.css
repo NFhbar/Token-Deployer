@@ -1,0 +1,53 @@
+/* PAGE */
+
+body,
+.pure-g [class*=pure-u] {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+}
+
+.container {
+  box-sizing: border-box;
+  width: calc(100% - 60px);
+  max-width: 600px;
+  padding: 45px 20px;
+  margin: 0 auto;
+}
+
+.pure-form input[type="text"]:focus {
+  border-color: #0c1a2b;
+}
+
+/* LOGO */
+#logo{
+  margin-top: 10px;
+  max-width:15%;
+  max-height:15%;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* LOADING SCREEN */
+.loading-screen {
+  opacity: 1;
+  visibility: visible;
+  transition: all .25s ease-in-out;
+}
+
+.loading-screen.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* FORMS */
+.pure-form {
+  display: inline-block;
+}
