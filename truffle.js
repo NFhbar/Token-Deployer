@@ -1,7 +1,7 @@
 require('dotenv').config();
 const Web3 = require("web3");
 const web3 = new Web3();
-const WalletProvider = require("truffle-hdwallet-provider");
+const WalletProvider = require("truffle-wallet-provider");
 const Wallet = require('ethereumjs-wallet');
 
 var rinkebyPrivateKey = new Buffer(process.env["RINKEBY_PRIVATE_KEY"], "hex");
@@ -29,7 +29,7 @@ module.exports = {
       //   console.log(result.gasLimit))
       gas: 6721975,
       gasPrice: web3.toWei("50", "gwei"),
-      network_id: "2",
+      network_id: "4",
     }
   },
   solc: {

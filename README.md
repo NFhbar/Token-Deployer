@@ -33,6 +33,10 @@ To deploy:
 truffle deploy --network [network]
 ```
 
+## Rinkeby Factory Instance
+
+MyTokenFactory: 0xc922efc865436117055608b7a908e23e75da48f0
+
 ## Issues
 
 ### Wrong Contract Address
