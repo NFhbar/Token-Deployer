@@ -6,11 +6,11 @@ Build using [Truffle Drizzle](http://truffleframework.com/blog/drizzle-reactive-
 
 ## To run locally
 Install:
-[Metamask](https://metamask.io/#how-it-works) & 
+[Metamask](https://metamask.io/#how-it-works) &
 [Ganache](http://truffleframework.com/ganache/)
 
 1. Run Ganache
-2. Deploy MyTokenFactory to ganache: ```truffle deploy --network [network]```
+2. Deploy MyTokenFactory to ganache: ```truffle deploy --network ganache```
 3. Run local front-end: ```npm run start```
 4. Using Metamask Custom RPC option connect to Private Ganache Network:
 5. RPC Server: HTTP://127.0.0.1:7545
