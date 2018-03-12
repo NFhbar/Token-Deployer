@@ -4,7 +4,7 @@ A factory contract that deploys an erc20 token and assigns the initial balance t
 Built using [Truffle Drizzle](http://truffleframework.com/blog/drizzle-reactive-ethereum-data-for-front-ends) and
 [zeppelin-solidity](https://github.com/OpenZeppelin/zeppelin-solidity).
 
-Dapp (Rinkeby) can be found [here](https://warm-retreat-57848.herokuapp.com/).
+Dapp (Rinkeby) can be found [here](https://one-click-token.herokuapp.com/).
 
 ## To run locally
 
@@ -37,7 +37,7 @@ truffle deploy --network [network]
 ```
 
 ## Rinkeby Factory Instance
-[Rinkeby Instance](https://warm-retreat-57848.herokuapp.com/)
+[Rinkeby Instance](https://one-click-token.herokuapp.com/)
 
 MyTokenFactory: 0xc922efc865436117055608b7a908e23e75da48f0
 
