@@ -10,7 +10,12 @@ Dapp (Rinkeby) can be found [here](https://one-click-token.herokuapp.com/).
 
 Install:
 [Metamask](https://metamask.io/#how-it-works) &
-[Ganache](http://truffleframework.com/ganache/)
+[Ganache](http://truffleframework.com/ganache/).
+
+Create a ```.env``` file in root directory and add your private key:
+```
+RINKEBY_PRIVATE_KEY="MY_PRIVATE_KEY_HERE"
+```
 
 1. Run Ganache
 2. Deploy MyTokenFactory to ganache: ```truffle deploy --network ganache```
