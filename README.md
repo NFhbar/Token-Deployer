@@ -13,6 +13,8 @@ Built using [Truffle Drizzle](http://truffleframework.com/blog/drizzle-reactive-
 
 Dapp (Rinkeby) can be found [here](https://one-click-token.herokuapp.com/).
 
+Medium article [here](https://medium.com/@NicoFrega/erc20-token-deployer-fd4b544598ab).
+
 ## To run locally
 
 Install:
