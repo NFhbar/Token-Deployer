@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+- ganache-cli -p 8545 > /dev/null &
+- sleep 5
+- truffle migrate
+- truffle test

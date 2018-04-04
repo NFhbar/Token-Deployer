@@ -1,5 +1,12 @@
 # Token Deployer
 
+<div>
+
+[![Build Status](https://travis-ci.org/NFhbar/Token-Deployer.png?branch=master)](https://travis-ci.org/NFhbar/Token-Deployer)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+
+</div>
+
 A factory contract that deploys an erc20 token and assigns the initial balance to the sender.
 Built using [Truffle Drizzle](http://truffleframework.com/blog/drizzle-reactive-ethereum-data-for-front-ends) and
 [zeppelin-solidity](https://github.com/OpenZeppelin/zeppelin-solidity).
