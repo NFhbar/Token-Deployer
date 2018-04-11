@@ -3,7 +3,7 @@
 <div>
 
 [![Build Status](https://travis-ci.org/NFhbar/Token-Deployer.png?branch=master)](https://travis-ci.org/NFhbar/Token-Deployer)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/NFhbar/Token-Deployer/issues)
 
 </div>
 
