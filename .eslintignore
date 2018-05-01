@@ -1,0 +1,7 @@
+# Ignore folders
+/build
+/build_webpack
+/contracts
+/coverage
+/images
+/public

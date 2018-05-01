@@ -1,6 +1,6 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.21;
 
-import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
+import "./StandardToken.sol";
 
 /**
  * @title MyToken
@@ -10,23 +10,23 @@ import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
  */
 contract MyToken is StandardToken {
 
-  string public name;
-  string public symbol;
-  uint8 public constant decimals = 18;
+    string public name;
+    string public symbol;
+    uint8 public constant decimals = 18;
 
-  uint256 public constant INITIAL_SUPPLY = 10000 * (10 ** uint256(decimals));
+    uint256 public constant INITIAL_SUPPLY = 10000 * (10 ** uint256(decimals));
 
-  /**
-   * @dev Constructor that gives msg.sender all of existing tokens.
-   */
-   function MyToken(string _name, string _symbol, address _owner)
-      public
-  {
-      name = _name;
-      symbol = _symbol;
-      totalSupply_ = INITIAL_SUPPLY;
-      balances[_owner] = INITIAL_SUPPLY;
-      Transfer(0x0, _owner, INITIAL_SUPPLY);
-   }
+    /**
+     * @dev Constructor that gives msg.sender all of existing tokens.
+     */
+    constructor(string _name, string _symbol, address _owner)
+        public
+    {
+        name = _name;
+        symbol = _symbol;
+        totalSupply_ = INITIAL_SUPPLY;
+        balances[_owner] = INITIAL_SUPPLY;
+        emit Transfer(0x0, _owner, INITIAL_SUPPLY);
+    }
 
 }

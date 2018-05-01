@@ -3,6 +3,7 @@
 <div>
 
 [![Build Status](https://travis-ci.org/NFhbar/Token-Deployer.png?branch=master)](https://travis-ci.org/NFhbar/Token-Deployer)
+[![Coverage Status](https://coveralls.io/repos/github/NFhbar/Token-Deployer/badge.svg?branch=master)](https://coveralls.io/github/NFhbar/Token-Deployer?branch=master)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/NFhbar/Token-Deployer/issues)
 
 </div>
@@ -50,6 +51,14 @@ To deploy:
 truffle deploy --network [network]
 ```
 
+## Truffle Tests and Coverage:
+```
+$ npm run test:truffle
+```
+```
+$ npm run coverage
+```
+
 ## Rinkeby Factory Instance
 [Rinkeby Instance](https://one-click-token.herokuapp.com/)
 
@@ -75,6 +84,16 @@ Error: The current provider doesn't support subscriptions: MetamaskInpageProvide
 ```
 https://github.com/MetaMask/metamask-extension/issues/2350
 
+### Solidity Coverage testrpc ghost process
+After running solidity-coverage, testrpc remains a ghost process.
+Solution: kill it with:
+```
+$ npm run stop
+```
+and run coverage again:
+```
+$ npm run coverage
+```
 
 ## License
 [MIT](https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/LICENSE)

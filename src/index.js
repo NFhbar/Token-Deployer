@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import { Provider } from 'react-redux'
 import { syncHistoryWithStore } from 'react-router-redux'
@@ -24,33 +24,33 @@ const history = syncHistoryWithStore(browserHistory, store)
 
 // Set Drizzle options.
 const options = {
-  web3: {
-    block: false,
-    fallback: {
-      type: 'ws',
-      url: 'ws://127.0.0.1:8545'
+    web3: {
+        block: false,
+        fallback: {
+            type: 'ws',
+            url: 'ws://127.0.0.1:8545'
+        }
+    },
+    contracts: [
+        MyTokenFactory
+    ],
+    events: {
+        MyTokenFactory: ['ContractInstantiation']
     }
-  },
-  contracts: [
-    MyTokenFactory
-  ],
-  events: {
-    MyTokenFactory: ['ContractInstantiation']
-  }
 }
 
 ReactDOM.render((
     <DrizzleProvider options={options}>
-      <Provider store={store}>
-        <LoadingContainer>
-          <Router history={history}>
-            <Route path="/" component={App}>
-              <IndexRoute component={HomeContainer} />
-            </Route>
-          </Router>
-        </LoadingContainer>
-      </Provider>
+        <Provider store={store}>
+            <LoadingContainer>
+                <Router history={history}>
+                    <Route path="/" component={App}>
+                        <IndexRoute component={HomeContainer} />
+                    </Route>
+                </Router>
+            </LoadingContainer>
+        </Provider>
     </DrizzleProvider>
-  ),
-  document.getElementById('root')
-);
+),
+document.getElementById('root')
+)

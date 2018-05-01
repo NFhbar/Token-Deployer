@@ -1,5 +1,5 @@
-var MyTokenFactory = artifacts.require("./MyTokenFactory.sol");
+const MyTokenFactory = artifacts.require('./MyTokenFactory.sol')
 
 module.exports = function(deployer) {
-  deployer.deploy(MyTokenFactory);
-};
+    deployer.deploy(MyTokenFactory)
+}

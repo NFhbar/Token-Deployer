@@ -1,4 +1,4 @@
-node_modules
-build_webpack
+/node_modules
+/build_webpack
 .env
 /images
