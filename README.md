@@ -1,5 +1,7 @@
 # Token Deployer
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/NFhbar/Token-Deployer.svg)](https://greenkeeper.io/)
+
 <div>
 
 [![Build Status](https://travis-ci.org/NFhbar/Token-Deployer.png?branch=master)](https://travis-ci.org/NFhbar/Token-Deployer)
