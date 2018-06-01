@@ -16,7 +16,8 @@ import {
     FormGroup,
     Input,
     Row,
-    Button } from 'reactstrap'
+    Button
+} from 'reactstrap'
 
 
 class Home extends Component {
@@ -34,19 +35,20 @@ class Home extends Component {
         this.state = {
             tokenName: '',
             tokenSymbol: '',
+            tokenInitialSupply: '',
             tokenAddress: '',
-            receipt:'',
+            receipt: '',
             error: '',
             visible: true,
-            sendingMessage:'',
-            successMessage:''
+            sendingMessage: '',
+            successMessage: ''
         }
     }
 
     async handleDeployToken() {
-        if(!this.state.tokenName || !this.state.tokenSymbol) {
+        if (!this.state.tokenName || !this.state.tokenSymbol) {
             this.setState({ visible: true })
-            this.setState({ error: 'Please provide all values.'})
+            this.setState({ error: 'Please provide all values.' })
         } else {
             this.setState({ error: '' })
             this.setState({ visible: true })
@@ -54,8 +56,7 @@ class Home extends Component {
 
             try {
                 const nonce = await this.web3.eth.getTransactionCount(this.props.accounts[0])
-                console.log(nonce)
-                this.setState({ receipt: await this.contracts.MyTokenFactory.methods.create(this.state.tokenName, this.state.tokenSymbol).send( { nonce: nonce } ) })
+                this.setState({ receipt: await this.contracts.MyTokenFactory.methods.create(this.state.tokenName, this.state.tokenSymbol, this.state.tokenInitialSupply).send({ nonce: nonce }) })
                 this.setState({ tokenAddress: this.state.receipt.events.ContractInstantiation.returnValues.instantiation })
                 this.setState({ sendingMessage: '' })
                 this.setState({ successMessage: 'Token deployed!' })
@@ -85,13 +86,13 @@ class Home extends Component {
                             <CardImg src={logo} className="center-block img-responsive" alt="drizzle-logo" id="logo" />
                             <CardBody>
                                 <CardTitle>
-                  My Token Deployer
+                                    My Token Deployer
                                 </CardTitle>
                                 <CardText>
-                  Simply select your Token name and symbol and click deploy!
+                                    Simply select your Token name and symbol and click deploy!
                                 </CardText>
                                 <CardText>
-                  My deploying account: {this.props.accounts[0]}
+                                    My deploying account: {this.props.accounts[0]}
                                 </CardText>
                                 <Form className="pure-form pure-form-stacked">
                                     <FormGroup>
@@ -113,31 +114,41 @@ class Home extends Component {
                                             placeholder="Token Symbol"
                                         />
                                     </FormGroup>
+                                    <FormGroup>
+                                        <Input
+                                            name="tokenInitialSupply"
+                                            type="text"
+                                            maxLength="3"
+                                            value={this.state.tokenInitialSupply}
+                                            onChange={this.handleInputChange}
+                                            placeholder="Token Initial Supply"
+                                        />
+                                    </FormGroup>
                                     {this.state.error &&
-                    <Alert
-                        color="danger"
-                        isOpen={this.state.visible}
-                        toggle={this.onDismiss}>
-                        {this.state.error}
-                    </Alert>
+                                        <Alert
+                                            color="danger"
+                                            isOpen={this.state.visible}
+                                            toggle={this.onDismiss}>
+                                            {this.state.error}
+                                        </Alert>
                                     }
                                     {this.state.sendingMessage &&
-                    <Alert
-                        color="light"
-                        isOpen={this.state.visible}>
-                        {this.state.sendingMessage}
-                        <div className="loader">
-                            <img src={loader} className="img-fluid" alt="" id="loader"></img>
-                        </div>
-                    </Alert>
+                                        <Alert
+                                            color="light"
+                                            isOpen={this.state.visible}>
+                                            {this.state.sendingMessage}
+                                            <div className="loader">
+                                                <img src={loader} className="img-fluid" alt="" id="loader"></img>
+                                            </div>
+                                        </Alert>
                                     }
                                     {this.state.successMessage &&
-                      <Alert
-                          color="success"
-                          isOpen={this.state.visible}
-                          toggle={this.onDismiss}>
-                          {this.state.successMessage}
-                      </Alert>
+                                        <Alert
+                                            color="success"
+                                            isOpen={this.state.visible}
+                                            toggle={this.onDismiss}>
+                                            {this.state.successMessage}
+                                        </Alert>
                                     }
                                     <Button color="primary" className="pure-button" type="button" onClick={this.handleDeployToken}>Deploy my Token!</Button>
                                 </Form>

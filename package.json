@@ -85,9 +85,11 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "deployRinkeby" : "truffle deploy --network rinkeby",
     "test": "node scripts/test.js --env=jsdom",
     "chain": "geth --datadir=\"/tmp/eth/60/01\" --nodiscover --maxpeers 0 --port 30301 --rpc --rpcapi \"db,eth,net,web3\" --rpcport 8101 --verbosity 6 console",
     "coverage": "./node_modules/.bin/solidity-coverage",
+    "compile":"rm -dr ./build & truffle compile",
     "ganache": "ganache-cli -p 9545 -m 'candy maple cake sugar pudding cream honey rich smooth crumble sweet treat' > /dev/null &",
     "test:truffle": "npm run ganache sleep 5 && npm run lint && truffle test && npm run stop",
     "stop": "sudo kill `sudo lsof -t -i:9545`",
