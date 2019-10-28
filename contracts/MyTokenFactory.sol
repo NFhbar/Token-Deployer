@@ -4,7 +4,7 @@ import "./Factory.sol";
 import "./MyToken.sol";
 
 /// @title MyToken Factory - Allows creation of custom token.
-/// @author Nicolas frega - <nicolas.frega@srax.com>
+/// @author Nicolas frega - <frega.nicolas@gmail.com>
 
 contract MyTokenFactory is Factory {
 
