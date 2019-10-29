@@ -8,7 +8,7 @@ contract('MyTokenFactory', accounts => {
     const owner = accounts[0]
     const tokenName = 'MyToken'
     const tokenSymbol = 'MTS'
-    const INITIAL_SUPPLY = 1e+22
+    const INITIAL_SUPPLY = 200
 
     beforeEach(async () => {
         // [accounts[0], accounts[1]], requiredConfirmations, dailyLimit
@@ -17,8 +17,8 @@ contract('MyTokenFactory', accounts => {
     })
 
     it('Deploys and gives Tokens to msg.sender', async () => {
-    //Create Factory Contract
-        const token = await factoryInstance.create(tokenName, tokenSymbol, {from: owner})
+        //Create Factory Contract
+        const token = await factoryInstance.create(tokenName, tokenSymbol, INITIAL_SUPPLY, { from: owner })
         const tokenAddress = utils.getParamFromTxEvent(token, 'instantiation', null, 'ContractInstantiation')
 
         //Check owner has instantiation of token contract
@@ -36,10 +36,11 @@ contract('MyTokenFactory', accounts => {
         const name = await tokenInstance.name()
         const symbol = await tokenInstance.symbol()
         const balanceOwner = await tokenInstance.balanceOf(owner)
-
+        console.log(balanceOwner)
+        console.log(INITIAL_SUPPLY)
         //check they are all the same
         assert.equal(name, tokenName)
         assert.equal(symbol, tokenSymbol)
-        assert.equal(balanceOwner, INITIAL_SUPPLY)
+        assert.equal(balanceOwner.toString(10), (INITIAL_SUPPLY) * (10 ** 18))
     })
 })
