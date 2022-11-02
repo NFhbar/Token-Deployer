@@ -54,7 +54,7 @@
     "recursive-readdir": "2.1.0",
     "strip-ansi": "3.0.1",
     "style-loader": "0.13.1",
-    "solidity-coverage": "^0.5.0",
+    "solidity-coverage": "^0.5.11",
     "solium": "^1.1.7",
     "truffle-contract": "^1.1.8",
     "truffle-hdwallet-provider": "0.0.3",
